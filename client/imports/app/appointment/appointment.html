@@ -1,0 +1,26 @@
+<div fxLayout="row" class="main-container" style="background: brown; height:100%;">   
+    <div fxFlex="60" class="appoint-container" style="background: red;padding :20px">
+        <div flexLayout="column" class="left-container">
+            <div fxFlex="20" class="top-left-container">
+                <div fxLayout="row wrap" class="appoint-filter-container" style="background: blue;height: 100%;">
+                    <ng-container *ngFor="let _ of [1,2,3,4]">
+                        <div fxFlex="0 1 calc(50% - 32px)" style="background: green;height: 40px;"></div>
+                    </ng-container>
+                </div>
+            </div>
+            
+            <div fxFlex class="bottom-left-container">
+                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start" class="appoint-card">
+                    <ng-container *ngFor="let _ of [1,2,3,4,5,6]">
+                        <div fxFlex="0 1 calc(33.3% - 32px)"></div>
+                    </ng-container>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div fxFlex class="complex-container" style="background: yellow; height:20px;">
+
+    </div>
+</div>
