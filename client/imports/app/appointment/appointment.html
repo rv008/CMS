@@ -1,26 +1,112 @@
-<div fxLayout="row" class="main-container" style="background: brown; height:100%;">   
-    <div fxFlex="60" class="appoint-container" style="background: red;padding :20px">
+<div fxLayout="row" class="main-container">
+    <div fxFlex="60" class="appoint-container">
         <div flexLayout="column" class="left-container">
-            <div fxFlex="20" class="top-left-container">
-                <div fxLayout="row wrap" class="appoint-filter-container" style="background: blue;height: 100%;">
-                    <ng-container *ngFor="let _ of [1,2,3,4]">
-                        <div fxFlex="0 1 calc(50% - 32px)" style="background: green;height: 40px;"></div>
+            <section class="top-left-container">
+                <div fxLayout="row wrap" class="appoint-filter-container">
+
+                    <div class="filter-box" fxFlex="0 1 calc(50% - 20px)">
+                        <mat-form-field floatLabel=never>
+                            <mat-label>Department</mat-label>
+                            <mat-select disableOptionCentering>
+                                <mat-option *ngFor="let food of
+                                    ['foods','test','test','test','test']"
+                                    [value]="food">
+                                    {{food}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="filter-box" fxFlex="0 1 calc(50% - 20px)">
+                        <mat-form-field floatLabel=never>
+                            <mat-label>Provider</mat-label>
+                            <mat-select disableOptionCentering>
+                                <mat-option *ngFor="let food of
+                                    ['foods','test','test','test','test']"
+                                    [value]="food">
+                                    {{food}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div fxFlex="0 1 calc(50%)">
+
+                        <div fxLayout="row">
+                            <mat-form-field class="filter-box-date" fxFlex="60"
+                                floatLabel=never>
+                                <input matInput [matDatepicker]="picker"
+                                    placeholder="Choose a date">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+
+                            <button class="filter-box-button" fxFlex
+                                mat-raised-button color="primary">Today</button>
+                        </div>
+
+                    </div>
+
+                    <div class="filter-box" fxFlex="0 1 calc(50% - 20px)">
+                        <mat-form-field floatLabel=never>
+                            <mat-label>Favorite food</mat-label>
+                            <mat-select disableOptionCentering>
+                                <mat-option *ngFor="let food of
+                                    ['foods','test','test','test','test']"
+                                    [value]="food">
+                                    {{food}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="bottom-left-container">
+                <div fxLayout="row wrap" fxLayoutAlign="flex-start"
+                    class="appoint-card">
+                    <ng-container *ngFor="let _ of
+                        [1,2,3,4,5,6,7,8,9,10,11,12,13,14]">
+                        <mat-card fxFlex="0 1 calc(50% - 20px)"
+                            class="appoint-card-box">
+                            <mat-card-header>
+                                <mat-card-subtitle>id #712731516</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+
+                            </mat-card-content>
+                            <mat-card-actions>
+
+                            </mat-card-actions>
+                        </mat-card>
                     </ng-container>
                 </div>
-            </div>
-            
-            <div fxFlex class="bottom-left-container">
-                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start" class="appoint-card">
-                    <ng-container *ngFor="let _ of [1,2,3,4,5,6]">
-                        <div fxFlex="0 1 calc(33.3% - 32px)"></div>
-                    </ng-container>
-                </div>
-            </div>
-            
+            </section>
+
         </div>
     </div>
 
-    <div fxFlex class="complex-container" style="background: yellow; height:20px;">
+    <div fxFlex class="complex-container">
+        <div fxLayout="column" class="right-container">
 
+            <section fxLayout="row" class="top-right-button">
+                <div fxFlex="50" class="top-box">Patient</div>
+
+                <div fxFlex class="top-box">Provider</div>
+            </section>
+
+            <section class="top-right-button">
+                <div class="top-box">Search</div>
+            </section>
+
+            <section>
+
+            </section>
+
+            <section>
+
+            </section>
+        </div>
     </div>
 </div>

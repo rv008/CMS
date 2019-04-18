@@ -1,0 +1,67 @@
+.main-container {
+    height: 100%;
+    background-color:#37A2FF;
+}
+
+.appoint-container {
+    padding :20px; 
+    height:100%;
+}
+
+.appoint-filter-container .filter-box {
+    background: white;
+    height: 40px; 
+    margin: 10px;
+}
+
+.appoint-filter-container .filter-box-date {
+    background: white;
+    height: 40px; 
+    margin: 10px;
+}
+
+.appoint-filter-container .filter-box-button {
+    height: 40px; 
+    margin: 10px;
+}
+
+.appoint-card {
+    overflow-y: overlay; 
+    max-height: 70vh;
+}
+
+.appoint-card-box {
+    background: white;
+    height: 150px;
+    margin: 10px;
+}
+
+.complex-container {
+    height:100%;
+    padding :20px;
+}
+
+.top-right-button .top-box {
+    margin: 10px;
+    height: 40px; 
+    background: white;
+}
+
+.mat-card {
+    border-radius: 0;
+}
+
+mat-form-field {
+    width: 100%;
+    // padding-left: 20px;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep .mat-form-field-infix {
+    border-top: .4em solid transparent;
+    margin-left: 10px;
+}
+
